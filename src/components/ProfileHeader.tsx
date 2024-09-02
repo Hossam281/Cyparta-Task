@@ -36,7 +36,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
             className="rounded-full"
           />
           <div className="ml-4">
-            <h2 className="text-2xl font-semibold">{name}</h2>
+            <h2 className="text-2xl font-semibold">{name.length > 0 ? name : "N/A"}</h2>
             <div className="flex gap-2 items-center">
               <Job className="w-4 h-4 stroke-black" />
               <p className="text-sm text-gray-600">{role}</p>

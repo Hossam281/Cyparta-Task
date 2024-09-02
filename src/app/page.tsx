@@ -66,7 +66,7 @@ const Login = () => {
         );
 
         const result = await response.json();
-        console.log(result);
+        
 
         if (result.access && result.refresh) {
           Cookies.set('token', result.access, {

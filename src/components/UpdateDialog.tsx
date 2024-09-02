@@ -72,7 +72,7 @@ const UpdateDialog: React.FC<ProfileDetailsProps> = ({ userData }) => {
       );
 
       const responseData = await response.json();
-      console.log("API Response:", responseData);
+      
 
       if (response.ok) {
         toast.success("Profile updated successfully!");

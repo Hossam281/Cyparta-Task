@@ -18,7 +18,7 @@ const PersonalInformation: React.FC<ProfileDetailsProps> = ({ userData }) => {
             First Name
           </label>
           <p className="mt-1 text-sm font-medium text-gray-900">
-            {userData.first_name}
+            {userData.first_name.length > 0 ? userData.first_name : "N/A"}
           </p>
         </div>
         <div>
@@ -26,7 +26,7 @@ const PersonalInformation: React.FC<ProfileDetailsProps> = ({ userData }) => {
             Last Name
           </label>
           <p className="mt-1 text-sm font-medium text-gray-900">
-            {userData.last_name}
+            {userData.last_name.length > 0 ? userData.last_name : "N/A"}
           </p>
         </div>
         <div>
