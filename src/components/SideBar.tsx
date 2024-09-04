@@ -23,8 +23,8 @@ const SideBar: React.FC = () => {
     if (pathname) {
       if (pathname.includes('/employees/profile')) {
         setActiveLink('profile');
-      } else if (pathname.includes('/')) {
-        setActiveLink('login');
+      } else if (pathname==='/') {
+        setActiveLink('/');
       } else if (pathname.includes('/attendance')) {
         setActiveLink('attendance');
       } else if (pathname.includes('/tasks')) {
@@ -122,14 +122,14 @@ const SideBar: React.FC = () => {
           passHref
           onClick={(e) => handleClick(e, "/")}
           className={`py-2 px-4 w-full rounded-r-3xl cursor-pointer flex hover:bg-gray-300 justify-center gap-2 items-center text-center ${
-            activeLink === "login"
+            activeLink === "/"
               ? "bg-[#F9EAEB] text-[#EC232B] border-l-4 border-[#EC232B]"
               : ""
           }`}
         >
           <Login
             className={`w-4 h-4 ${
-              activeLink === "login" ? "fill-[#EC232B]" : "fill-gray-700"
+              activeLink === "/" ? "fill-[#EC232B]" : "fill-gray-700"
             }`}
           />
           <span className="w-[30%]">Login</span>
